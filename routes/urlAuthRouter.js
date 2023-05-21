@@ -13,7 +13,7 @@ import {
 } from "../Controller/urlUserController.js";
 import { authMiddleware } from "../middlewares/authMiddleware.js";
 
-export const authRouter = express.Router();
+export const urlAuthRouter = express.Router();
 authRouter.post("/login", loginUserCtrl);
 authRouter.post("/register", createUser);
 authRouter.put("/password", authMiddleware, updatepassword);

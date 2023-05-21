@@ -1,6 +1,6 @@
 import express from 'express';
 import { urlIndexController } from '../Controller/urlIndexController.js';
 
-export const indexRouter = express.Router();
+export const urlIndexRouter = express.Router();
 
 indexRouter.get('/:urlId', urlIndexController);
