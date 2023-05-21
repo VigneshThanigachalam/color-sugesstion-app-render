@@ -1,4 +1,4 @@
-import { urlModel as Url } from '../Model/urlModel.js';
+import { urlModel as Url } from '../model/urlModel.js';
 
 
 export const urlIndexController = async (req, res) => {

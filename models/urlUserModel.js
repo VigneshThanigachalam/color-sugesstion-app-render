@@ -55,4 +55,4 @@ userSchema.methods.createpasswordResetToken = async function () {
 };
 
 //Export the model
-export const userModel = mongoose.model("trimUrlUsers", userSchema);
+export const urlUserModel = mongoose.model("trimUrlUsers", userSchema);
