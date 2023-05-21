@@ -4,6 +4,7 @@ import bodyParser from "body-parser";
 import cookieparser from "cookie-parser";
 import { notFound, errorHandler } from "./middlewares/errorHandler.js";
 import { authRouter } from "./routes/authRoutes.js";
+import { urlRouter } from "./routes/urlRouter.js";
 import { urlAuthRouter } from "./routes/urlAuthRouter.js";
 import { urlIndexRouter } from "./routes/urlIndexRouter.js";
 import cors from "cors";
