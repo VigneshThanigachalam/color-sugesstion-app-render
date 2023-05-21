@@ -1,4 +1,4 @@
-import { urlUserModel as user } from "../models/urlUserModel";
+import { urlUserModel as user } from "../models/urlUserModel.js";
 import jwt from "jsonwebtoken";
 import asyncHandler from "express-async-handler";
 
