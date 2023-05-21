@@ -14,12 +14,12 @@ import {
 import { authMiddleware } from "../middlewares/authMiddleware.js";
 
 export const urlAuthRouter = express.Router();
-authRouter.post("/login", loginUserCtrl);
-authRouter.post("/register", createUser);
-authRouter.put("/password", authMiddleware, updatepassword);
-authRouter.post("/forget-password", forgetPasswordtoken);
-authRouter.put("/reset-password", resetPassword);
-authRouter.post("/validateToken", authMiddleware, validateToken);
-authRouter.put("/log-out", authMiddleware, logOut);
-authRouter.put("/savedCount", authMiddleware, savedCount);
-authRouter.get("/saved-url", authMiddleware, getsavedUrl);
+urlAuthRouter.post("/login", loginUserCtrl);
+urlAuthRouter.post("/register", createUser);
+urlAuthRouter.put("/password", authMiddleware, updatepassword);
+urlAuthRouter.post("/forget-password", forgetPasswordtoken);
+urlAuthRouter.put("/reset-password", resetPassword);
+urlAuthRouter.post("/validateToken", authMiddleware, validateToken);
+urlAuthRouter.put("/log-out", authMiddleware, logOut);
+urlAuthRouter.put("/savedCount", authMiddleware, savedCount);
+urlAuthRouter.get("/saved-url", authMiddleware, getsavedUrl);
