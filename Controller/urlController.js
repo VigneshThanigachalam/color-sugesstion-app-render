@@ -1,5 +1,5 @@
 import { nanoid } from 'nanoid';
-import { urlModel as Url, urlModel } from '../model/urlModel.js';
+import { urlModel as Url, urlModel } from '../models/urlModel.js';
 import { validateUrl } from "../utils/utils.js"
 import asyncHandler from "express-async-handler";
 

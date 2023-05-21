@@ -1,5 +1,5 @@
-import { urlUserModel as user } from "../model/urlUserModel.js";
-import { urlModel as Url } from '../model/urlModel.js';
+import { urlUserModel as user } from "../models/urlUserModel.js";
+import { urlModel as Url } from '../models/urlModel.js';
 import asyncHandler from "express-async-handler";
 import { generateToken } from "../configure/jwToken.js";
 import { validatemongodbId } from "../utils/validatemongodbId.js";
