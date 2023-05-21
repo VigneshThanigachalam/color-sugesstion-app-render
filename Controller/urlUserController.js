@@ -167,6 +167,8 @@ export const savedCount = asyncHandler(async (req, res) => {
     const { email } = req.user;
     try {
         const finduser = await Url.find({ created_by: email });
+        console.log(finduser);
+        console.log(finduser.length);
         const count = finduser.length;
         res.json({
             addedUrl: count ? count : 0,
