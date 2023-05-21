@@ -1,8 +1,8 @@
 import express from "express";
 import { urlController } from "../Controller/urlController.js";
-import { authMiddleware } from "../middlewares/authMiddleware.js";
+import { urlAuthMiddleware } from "../middlewares/urlAuthMiddleware.js";
 
 export const urlRouter = express.Router();
 
 // Short URL Generator
-urlRouter.post('/short', authMiddleware, urlController);
+urlRouter.post('/short', urlAuthMiddleware, urlController);

@@ -11,15 +11,15 @@ import {
     savedCount,
     getsavedUrl,
 } from "../Controller/urlUserController.js";
-import { authMiddleware } from "../middlewares/authMiddleware.js";
+import { urlAuthMiddleware } from "../middlewares/urlAuthMiddleware.js";
 
 export const urlAuthRouter = express.Router();
 urlAuthRouter.post("/login", loginUserCtrl);
 urlAuthRouter.post("/register", createUser);
-urlAuthRouter.put("/password", authMiddleware, updatepassword);
+urlAuthRouter.put("/password", urlAuthMiddleware, updatepassword);
 urlAuthRouter.post("/forget-password", forgetPasswordtoken);
 urlAuthRouter.put("/reset-password", resetPassword);
-urlAuthRouter.post("/validateToken", authMiddleware, validateToken);
-urlAuthRouter.put("/log-out", authMiddleware, logOut);
-urlAuthRouter.put("/savedCount", authMiddleware, savedCount);
-urlAuthRouter.get("/saved-url", authMiddleware, getsavedUrl);
+urlAuthRouter.post("/validateToken", urlAuthMiddleware, validateToken);
+urlAuthRouter.put("/log-out", urlAuthMiddleware, logOut);
+urlAuthRouter.put("/savedCount", urlAuthMiddleware, savedCount);
+urlAuthRouter.get("/saved-url", urlAuthMiddleware, getsavedUrl);
