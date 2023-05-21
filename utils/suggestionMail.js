@@ -32,7 +32,7 @@ const sendmail = asyncHandler(
         pass: process.env.EMAIL_PASSWORD, // generated ethereal password
       },
     });
-    
+
     const htmlContent = `<table>
             <tr><td><b>Category:</b></td><td>${category}</td></tr>
             <tr><td><b>Dress Type:</b></td><td>${dressType}</td></tr>

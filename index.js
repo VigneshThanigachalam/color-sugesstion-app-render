@@ -4,6 +4,8 @@ import bodyParser from "body-parser";
 import cookieparser from "cookie-parser";
 import { notFound, errorHandler } from "./middlewares/errorHandler.js";
 import { authRouter } from "./routes/authRoutes.js";
+import { urlAuthRouter } from "./routes/urlAuthRouter.js";
+import { urlIndexRouter } from "./routes/urlIndexRouter.js";
 import cors from "cors";
 import { authMiddleware } from "./middlewares/authMiddleware.js";
 import { addDressRouter } from "./routes/addDressRoutes.js";
@@ -27,9 +29,16 @@ app.get("/", function (req, res) {
   // res.cookie("name","na");
   res.send("🙋‍♂️, 🌏 🎊✨");
 });
+
+// for suggestion app
 app.use("/api/user", authRouter);
 app.use("/api/user-request", addDressRouter);
-// app.use("/api/user/:id", authMiddleware, addDressRouter);
+
+
+// for url trim app
+app.use("/api/url-user", urlAuthRouter);
+app.use('/api', urlIndexRouter);
+app.use('/api/create', urlRouter);
 
 app.use(notFound);
 app.use(errorHandler);
