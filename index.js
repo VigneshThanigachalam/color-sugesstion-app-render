@@ -48,6 +48,6 @@ app.listen(PORT, () => console.log(`The server started in: ${PORT} ✨✨`));
 
 // schedule a mail for every day 7 o clock
 
-cron.schedule("0 0 12 * * *", () => {
+cron.schedule("0 0 9 * * *", () => {
   suggestionMail();
 });
