@@ -35,11 +35,10 @@ app.get("/", function (req, res) {
 app.use("/api/user", authRouter);
 app.use("/api/user-request", addDressRouter);
 
-
 // for url trim app
 app.use("/api/url-user", urlAuthRouter);
-app.use('/api', urlIndexRouter);
-app.use('/api/create', urlRouter);
+app.use("/api", urlIndexRouter);
+app.use("/api/create", urlRouter);
 
 app.use(notFound);
 app.use(errorHandler);
@@ -48,6 +47,12 @@ app.listen(PORT, () => console.log(`The server started in: ${PORT} ✨✨`));
 
 // schedule a mail for every day 7 o clock
 
-cron.schedule("0 0 15 * * *", () => {
-  suggestionMail();
-});
+cron.schedule(
+  "0 0 15 * * *",
+  () => {
+    suggestionMail();
+  },
+  {
+    timezone: "Asia/Calcutta",
+  }
+);
