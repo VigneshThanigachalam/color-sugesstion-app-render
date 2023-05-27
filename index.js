@@ -35,11 +35,10 @@ app.get("/", function (req, res) {
 app.use("/api/user", authRouter);
 app.use("/api/user-request", addDressRouter);
 
-
 // for url trim app
 app.use("/api/url-user", urlAuthRouter);
-app.use('/api', urlIndexRouter);
-app.use('/api/create', urlRouter);
+app.use("/api", urlIndexRouter);
+app.use("/api/create", urlRouter);
 
 app.use(notFound);
 app.use(errorHandler);
