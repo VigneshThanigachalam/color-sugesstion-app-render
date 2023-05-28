@@ -14,6 +14,7 @@ import cron from "node-cron";
 import { suggestionMail } from "./utils/suggestionMail.js";
 import dotenv from "dotenv";
 import nodemailer from "nodemailer";
+import { authAppRouter } from "./routes/authAppRouter.js";
 
 const app = express();
 dotenv.config();
@@ -39,6 +40,10 @@ app.use("/api/user-request", addDressRouter);
 app.use("/api/url-user", urlAuthRouter);
 app.use("/api", urlIndexRouter);
 app.use("/api/create", urlRouter);
+
+//for Auth app
+app.use("/api/auth-user", authAppRouter);
+
 
 app.use(notFound);
 app.use(errorHandler);
