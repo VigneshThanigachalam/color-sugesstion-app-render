@@ -12,7 +12,7 @@ import { sendEmail } from "./emailController.js";
 export const createUser = asyncHandler(async (req, res) => {
     const email = req.body.email;
     const finduser = await user.find({ email: email });
-    if (finduser == null) {
+    if (finduser.length == 0) {
         const newuser = await user.create(req.body);
         res.json({
             message: "successfully created",
