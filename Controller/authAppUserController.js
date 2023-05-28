@@ -121,7 +121,7 @@ export const forgetPasswordtoken = asyncHandler(async (req, res) => {
         const resetURL = `<a href="${appUrl}/reset-password/${token}">click here</a>`;
         const data = {
             to: email,
-            subject: "Dress Color Sugesstion App - Reset Password Link",
+            subject: "Auth App - Reset Password Link",
             html: `Please ${resetURL} to create new password.`,
         };
         sendEmail(data);
