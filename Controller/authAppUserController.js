@@ -1,4 +1,4 @@
-import { authAppUserModel as user } from "../models/authAppUserModel";
+import { authAppUserModel as user } from "../models/authAppUserModel.js";
 import asyncHandler from "express-async-handler";
 import { generateToken } from "../config/jwToken.js";
 import { validatemongodbId } from "../utils/validatemongodbId.js";

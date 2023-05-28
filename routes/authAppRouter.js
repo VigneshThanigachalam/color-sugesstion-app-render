@@ -8,7 +8,7 @@ import {
     resetPassword,
     validateToken,
     logOut
-} from "../Controller/authAppUserController";
+} from "../Controller/authAppUserController.js";
 import { authMiddleware } from "../middlewares/authMiddleware.js";
 
 export const authAppRouter = express.Router();
